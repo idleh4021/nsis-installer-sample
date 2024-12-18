@@ -16,6 +16,8 @@ namespace NsisSample
         {
             InitializeComponent();
             label1.Text = "축하드립니다!\n프로그램이 정상 실행되었습니다.";
+            foreach (string str in Environment.GetCommandLineArgs())
+                listBox1.Items.Add(str);
         }
     }
 }
