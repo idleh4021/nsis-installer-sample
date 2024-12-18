@@ -15,7 +15,7 @@ namespace NsisSample
         public Form1()
         {
             InitializeComponent();
-            label1.Text = "축하드립니다!\n프로그램이 정상 실행되었습니다.\n\n이제 끄세요.";
+            label1.Text = "축하드립니다!\n프로그램이 정상 실행되었습니다.";
         }
     }
 }
