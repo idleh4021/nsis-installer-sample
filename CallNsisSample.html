@@ -1,0 +1,18 @@
+<html>
+    <div>
+    
+        <button onclick="CallNsisSample()">Click me</button>
+    
+    </div>
+    <div>
+    <input placeholder="파라미터를 입력하세요" id="strparam">
+    </div>
+</html>
+<script>
+    function CallNsisSample(){
+        param = document.getElementById('strparam').value
+        console.log('파라미터:'+param)
+        location.href="NsisSample://"+param
+    }
+
+</script>
