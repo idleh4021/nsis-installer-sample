@@ -65,6 +65,12 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
+  
+  ;Create Regi
+  WriteRegStr HKCR "NSISSample" "URL protocol" ""
+  WriteRegStr HKCR "NSISSample\shell" "" "open"
+  WriteRegStr HKCR "NSISSample\shell\open" "" "command"
+  WriteRegStr HKCR "NSISSample\shell\open\command" "" '"$INSTDIR\NSISSample.exe" "%1"'
 SectionEnd
 
 
@@ -93,5 +99,7 @@ Section Uninstall
 
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
+  ;Delete Regi
+  DeleteRegKey HKCR "NSISSample"
   SetAutoClose true
 SectionEnd
