@@ -17,6 +17,7 @@ Install Package NSIS를 이용한 설치프로그램(.exe)생성 샘플 Reposito
 -->
 ## 소개
 <!--프로젝트에 대한 자세한 설명을 여기에 작성합니다.  -->
+- **개발환경** : C#, .Net Framework 4.7.2, Visual Studio 2022
 - **필요프로그램** : [NSIS](https://nsis.sourceforge.io/Download),[ HM NIS Edit](http://hmne.sourceforge.net/)
 
 - **주요기능** : 
