@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace NsisSample
@@ -17,7 +18,11 @@ namespace NsisSample
             InitializeComponent();
             label1.Text = "축하드립니다!\n프로그램이 정상 실행되었습니다.";
             foreach (string str in Environment.GetCommandLineArgs())
+            {
                 listBox1.Items.Add(str);
+                if (str.Contains("nsissample://")) 
+                listBox1.Items.Add("URL 디코딩 : " + HttpUtility.UrlDecode(str));
+            }
         }
     }
 }
